@@ -1,0 +1,145 @@
+/* МОДАЛЬНОЕ ОКНО */
+
+.modal-window {
+	display: block;
+	position: fixed;
+	z-index: 10;	
+	width: 960px;
+	height: 553px;
+	margin: 0 auto;
+	padding-top: 85px;
+	box-shadow: 0 10px 30px 7px rgba(0, 0, 0, .2);
+	background-color: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.btn {
+		width: 200px;
+		padding: 0;
+		text-align: center;
+		&::before {
+			top: 40%;
+		}
+		&:hover::before {
+			top: 0;
+		}
+	}
+}
+
+.modal-window__close {
+	display: none;
+}
+
+.modal-window__form__list {
+	width: 760px;
+	margin: 0 auto;
+}
+
+.modal-window__form__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal-window__form__item-input {
+	width: 360px;
+	.form__item-input__field {
+		width: 100%;
+		height: 40px;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+}
+
+.form__item-textarea__field {
+	padding: 20px 0 0 20px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	resize: none;
+}
+
+.modal-window__form__label {
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.form__item-input__field,
+.form__item-textarea__field {
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	background-color: #f2f2f2;
+	border: none;
+	&::placeholder {
+		color: rgba(70, 70, 70, .3);
+	}
+	&::hover {
+		background-color: #eaeaea;
+	}
+	&:focus {
+		outline-color: #f7e296;
+	}
+}
+
+.form__item-input__field:invalid {
+	background-color: #f6dada;
+}
+
+.modal__close {
+	width: 55px;
+	height: 55px;
+	position: absolute;
+  top: 5%;
+  right: 3%;
+	border-radius: 50%;
+	border: none;
+	opacity: .5;
+	outline: none;
+	cursor: pointer;
+	background-color: #f7e296;
+	&::before,
+	&::after {
+		content: "";
+		width: 33px;
+		height: 2px;
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		background-color: #fff;
+	}
+	&:hover {
+		opacity: 1;
+		box-shadow: 3px 5px 20px 1px rgba(0, 0, 0, .2);
+	}
+	&:focus {
+		@extend .modal__close:hover;
+	}
+	&:active {
+		opacity: .3;
+	}
+}
+
+.modal__close {
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+}
+
+.map-popup {
+	display: block;
+	position: fixed;
+	width: 960px;
+	height: 560px;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 10px 30px 7px rgba(0, 0, 0, .2);
+}
+
+.map-popup__close {
+	@extend .modal__close;
+}
