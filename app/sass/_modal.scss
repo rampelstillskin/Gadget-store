@@ -140,6 +140,10 @@
 	box-shadow: 0 10px 30px 7px rgba(0, 0, 0, .2);
 }
 
+.map-popup__btn-close {
+	display: none;
+}
+
 .map-popup__close {
 	@extend .modal__close;
 }
