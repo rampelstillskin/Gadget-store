@@ -2,12 +2,10 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Device</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/Normalize.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="js/index/slider/slick.css"/>
-	<link rel="stylesheet" href="js/index/slider/slick-theme.css"/>
 </head>
 <body>
 
@@ -55,7 +53,7 @@
 					<li class="main__services__item"><a href="#">гарантия</a></li>
 					<li class="main__services__item"><a href="#">контакты</a></li>
 				</ul>
-			</div>			
+			</div>		
 		</nav>
 	</header>
 
@@ -184,20 +182,20 @@
 		<section class="services">
 			<div class="services__wrapper">
 				<div class="services__list-label">
-					<button class="toggle services__btn delivery-item">Доставка</button>
-					<button class="services__btn warantly-item">Гарантия</button>		
-					<button class="services__btn credit-item">Кредит</button>
+					<button class="toggle services__btn item-delivery" data-button="delivery">Доставка</button>
+					<button class="services__btn item-warantly" data-button="warantly">Гарантия</button>		
+					<button class="services__btn item-credit" data-button="credit">Кредит</button>
 				</div>
 				<ul class="services__description-list">
-					<li class="services__description-item description-delivery">
+					<li class="services__description-item description-delivery" data-item="delivery">
 						<h2 class="services__description-item__title">Доставка</h2>
 						<p class="services__description-item__text">Мы с удовольсвием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 					</li>
-					<li class="services__description-item description-warantly description-item">
+					<li class="services__description-item description-warantly description-item" data-item="warantly" id="itemwarantly">
 						<h2 class="services__description-item__title">Гарантия</h2>
 						<p class="services__description-item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом - не преживайте, мы выдадим Вам новый Товар, не дом, конечно же.</p>
 					</li>
-					<li class="services__description-item description-credit description-item">
+					<li class="services__description-item description-credit description-item" data-item="credit">
 						<h2 class="services__description-item__title">Кредит</h2>
 						<p class="services__description-item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 					</li>
@@ -234,7 +232,7 @@
 					<h2 class="information__about-us--title">Контакты</h2>
 					<p class="information__contacts--text">Вы можете забрать товар сами. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 					<img class="information__contacts--img" src="img/Main/AboutUs/map.jpg" alt="Карта проезда" width="560" height="222">
-					<a href="#"><span class="btn btn-long">напишите нам</span></a>
+					<a href="#"><span class="btn btn-long write-us__btn">напишите нам</span></a>
 				</div>
 			</div>
 			
@@ -284,35 +282,35 @@
 	</footer>
 
 	<!-- МОДАЛЬНОЕ ОКНО -->
-	<!-- <section class="modal-window">
+	<section class="modal-window modal-window__close">
 		<h2 class="visually-hidden">Форма обратной связи</h2>
-		<form class="form-list">
-			<div class="form-input-wrapper">
-				<p class="form-item-input">
-					<label for="name-field">Ваше имя:</label>
-					<input class="form-item-field" type="text" id="name-field" placeholder="Имя Фамилия">
+		<form class="modal-window__form__list">
+			<div class="modal-window__form__container">
+				<p class="modal-window__form__item-input">
+					<label for="name-field" class="modal-window__form__label">Ваше имя:</label>
+					<input class="form__item-input__field" type="text" id="name-field" placeholder="Имя Фамилия">
 				</p>
-				<p class="form-item-input">
-					<label for="email-field">Ваш e-mail:</label>
-					<input class="form-item-field" type="email" id="email-field" placeholder="email@example">
+				<p class="modal-window__form__item-input">
+					<label for="email-field" class="modal-window__form__label">Ваш e-mail:</label>
+					<input class="form__item-input__field" type="email" id="email-field" placeholder="email@example">
 				</p>
 			</div>			
-			<p class="form-item-textarea">
-				<label for="textarea-field">Текст письма:</label>
-				<textarea class="form-item-field" name="text" id="textarea-field" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+			<p class="modal-window__form__item-textarea">
+				<label for="textarea-field" class="modal-window__form__label">Текст письма:</label>
+				<textarea class="form__item-textarea__field" name="text" id="textarea-field" cols="30" rows="10" placeholder="В свободной форме"></textarea>
 			</p>
-			<button type="submit" class="btn btn-long btn-classic">отправить</button>
+			<button type="submit" class="btn modal-window__btn">отправить</button>
 		</form>
-		<button type="button" class="modal-close"><span class="visually-hidden">Закрыть модальное окно</span></button>
-	</section> -->
+		<button type="button" class="modal__close"><span class="visually-hidden">Закрыть модальное окно</span></button>
+	</section>
 
 	<!-- КАРТА ПОПАП -->
-	<!-- <section class="map-popup">
+	<section class="map-popup map-popup__btn-close">
 		<h2 class="visually-hidden">Как до нас доехать</h2>
-			 <iframe src="#"></iframe> 
-		<button type="button" class="close-map"><span class="visually-hidden">Закрыть карту</span></button>
-	</section> -->
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js""></script>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473677!2d37.527429316058075!3d55.68703400452979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1566567909825!5m2!1sru!2sru" width="960" height="560" style="border:0"></iframe>
+		<button type="button" class="map-popup__close"><span class="visually-hidden">Закрыть карту</span></button>
+	</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/index/slider/slick.js"></script>
 	<script src="js/index/slider/slider.js"></script>
 	<script src="js/index/main.js"></script>

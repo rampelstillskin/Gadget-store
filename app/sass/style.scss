@@ -38,11 +38,14 @@ li {
 
 @import "font";
 @import "button";
+@import "modal";
 
 @import "index/header";
 @import "index/main"; 
 @import "index/footer";
+@import "index/slider_slick";
 
 @import "catalog/header";
 @import "catalog/main";
 @import "catalog/footer";
+@import "catalog/range_slider";

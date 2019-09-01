@@ -47,3 +47,35 @@ modalBtnClose.addEventListener("click", () => {
 modalBtnSubmit.addEventListener("click", () => {
 	closePopup();
 });
+
+
+// КАРТА ПОПАП
+
+const mapPopup = document.querySelector(".map-popup"),
+			mapPopupClose = mapPopup.querySelector(".map-popup__close"),
+			mapPopupOpen = document.querySelector(".information__contacts--img");
+
+const mapPopupEscPress = (evt) => {
+	if (evt.keyCode === escBtn) {
+		mapPopup.classList.add("map-popup__btn-close");
+	}
+};
+			
+const mapOpen = () => {
+	mapPopup.classList.remove("map-popup__btn-close");
+	document.addEventListener("keydown", mapPopupEscPress);
+};
+
+const mapClose = () => {
+	mapPopup.classList.add("map-popup__btn-close");
+	document.removeEventListener("keydown", mapPopupEscPress);
+};
+
+mapPopupOpen.addEventListener("click", () => {
+	mapOpen();
+});
+
+mapPopupClose.addEventListener("click", (evt) => {
+	evt.preventDefault();
+	mapClose();
+});
