@@ -57,5 +57,5 @@ gulp.task("copy", () => gulp.src([
 	.pipe(gulp.dest("build")));
 
 
-gulp.task("default", gulp.parallel("minify", "sass", "serve"));
+gulp.task("serve", gulp.parallel("minify", "sass", "serve"));
 gulp.task("build", gulp.series("clean", "copy", "sass", "images"));
