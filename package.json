@@ -1,5 +1,5 @@
 {
-  "name": "Gadget-store",
+  "name": "gadget-store",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -26,9 +26,9 @@
     "gulp-watch": "^5.0.1"
   },
   "scripts": {
-		"serve": "gulp default",
+    "serve": "gulp serve",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "gulp build && gulp serve"
   },
   "author": "Andrey Kharitonov",
   "license": "ISC"
