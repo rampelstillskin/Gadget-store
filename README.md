@@ -9,4 +9,4 @@
 * **serve:** Минификация, компиляция sass и live-server;
 * **build:** Финальная сборка: чистка мусора, оптимизация картинок, компиляция sass и копирование в папку(build);
 
-"[Демо сайта](https://rampelstillskin.github.io/gadget-store.github.io/build/index.html)"
+"[Демо сайта](https://rampelstillskin.github.io/gadget-store/build)"
